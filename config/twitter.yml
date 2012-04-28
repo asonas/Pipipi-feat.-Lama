@@ -1,5 +1,5 @@
 development:
   consumer_key: ""
   consumer_secret: ""
-  config.oauth_token: "" 
-  config.oauth_token_secret: ""
+  oauth_token: "" 
+  oauth_token_secret: ""

@@ -4,7 +4,7 @@
 require 'rubygems'
 require 'twitter'
 
-config = YAML.load_file(File.join("config", "twitter.yml" ))
+config = YAML.load_file(File.join("config", "twitter.yml" ))["development"]
 
 Twitter.configure do |conf|
   conf.consumer_key = config["consumer_key"]
@@ -13,6 +13,6 @@ Twitter.configure do |conf|
   conf.oauth_token_secret = config["oauth_token_secret"]
 end
 
-str = "aiueo"
+str = "sokode HIRANO desu."
 
 Twitter.update(str)

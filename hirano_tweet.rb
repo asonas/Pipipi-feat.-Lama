@@ -4,13 +4,15 @@
 require 'rubygems'
 require 'twitter'
 
-Twitter.configure do |config|
-config.consumer_key = config["consumer_key"]
-config.consumer_secret = config["consumer_secret"]
-config.oauth_token = config["oauth_token"]
-config.oauth_token_secret = config["oauth_token_secret"]
+config = YAML.load_file(File.join("config", "twitter.yml" ))
+
+Twitter.configure do |conf|
+  conf.consumer_key = config["consumer_key"]
+  conf.consumer_secret = config["consumer_secret"]
+  conf.oauth_token = config["oauth_token"]
+  conf.oauth_token_secret = config["oauth_token_secret"]
 end
 
-str = "びしんさんタイム"
+str = "aiueo"
 
 Twitter.update(str)

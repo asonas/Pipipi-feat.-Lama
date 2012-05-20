@@ -4,7 +4,7 @@
 require 'rubygems'
 require 'twitter'
 
-config = YAML.load_file(File.join("config", "twitter.yml" ))["development"]
+config = YAML.load_file(File.join("config", "twitter.yml" ))
 
 Twitter.configure do |conf|
   conf.consumer_key = config["consumer_key"]
